@@ -17,6 +17,7 @@ mongoose.connect(MONGO_URI)
 
 // Rutas
 const userRoutes = require('./routes/userRoutes');
-app.use('/api/users', userRoutes);
+app.use('/users', userRoutes);
+app.user('/saludo', saludo);
 
 app.listen(PORT, () => console.log(`Servidor corriendo en el puerto ${PORT}`));
