@@ -1,3 +1,4 @@
+//server.js
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
@@ -17,6 +18,8 @@ mongoose.connect(MONGO_URI)
 
 // Rutas
 const userRoutes = require('./routes/userRoutes');  
+const saludoRoutes = require('./routes/saludo');
 app.use('/users', userRoutes);
+app.use('/', saludoRoutes);
 
 app.listen(PORT, () => console.log(`Servidor corriendo en el puerto ${PORT}`));
