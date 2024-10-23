@@ -1,3 +1,4 @@
+//userModel.js
 const mongoose = require("mongoose");
 
 const userSchema = new mongoose.Schema({
@@ -7,7 +8,7 @@ const userSchema = new mongoose.Schema({
   passwordHash: { type: String, required: true },
   address: String,
   phone: String,
-  role: { type: String, default: "user" },
+  role: { type: String},
   createdAt: { type: Date, default: Date.now },
   updatedAt: { type: Date, default: Date.now },
 }, { collection: 'Users' });
