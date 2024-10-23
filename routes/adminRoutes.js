@@ -8,7 +8,7 @@ const router = express.Router();
 
 // Ruta para administador
 router.post('/register-admin', authMiddleware, adminAuthMiddleware, registerAdmin);
-//router.post('/register-admin', registerAdmin); // Ruta temporal para primer Administrador
+router.post('/register-admin', registerAdmin); // Ruta temporal para primer Administrador
 router.get('/list-pending-requests', authMiddleware, adminAuthMiddleware, getPendingRequests);
 router.post('/resolve-request', authMiddleware, adminAuthMiddleware, resolveRequest);
 router.get('/list-users', authMiddleware, adminAuthMiddleware, getListUsers);
