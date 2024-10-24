@@ -127,6 +127,9 @@ exports.resolveRequest = async (req, res) => {
             return res.status(400).json({ message: 'La solicitud no está en estado pendiente' });
         }
 
+        // Actualizar el estado de la solicitud a 'resolved'
+        request.status = 'resolved';
+
         // Asignar los contadores
         request.assignedMeters = meters;
         await request.save();
